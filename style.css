@@ -1,0 +1,179 @@
+:root {
+    --spacing-1: 8px;
+    --spacing-2: 12px;
+    --spacing-3: 16px;
+    --spacing-4: 24px;
+    --border-radius: 12px;
+    --font-color: #323232;
+}
+
+html, body {
+    height: 100%;
+    color: var(--font-color);
+}
+
+body {
+    font-family: Lobster, sans-serif;
+    padding: 0 var(--spacing-3);
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    display: block;
+}
+
+section {
+    padding: var(--spacing-3) 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-3) 0;
+}
+
+h1, h2 {
+    font-family: Lobster, sans-serif;
+    margin: 0 0 var(--spacing-2);
+}
+
+details {
+    cursor: pointer;
+}
+
+#logo {
+    margin: 0;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: bold;
+}
+
+.navigation-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-items: center;
+    margin: 0 0 0 auto;
+}
+
+.navigation-item {
+    margin: var(--spacing-2);
+    padding: 5px;
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.about-me-container {
+    display: flex;
+}
+
+.about-me-text-container {
+    margin-right: var(--spacing-3);
+}
+
+.portrait {
+    width: 300px;
+    border-radius: var(--border-radius);
+    flex-shrink: 0;
+}
+
+.project-image {
+    width: 50%;
+    height: 50%;
+    border-radius: var(--spacing-2);
+}
+
+summary {
+    list-style-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg");
+    padding: 5px;
+}
+
+.project-title h3 {
+    display: inline;
+}
+
+#skills-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#skills-container > * {
+    font-size: 2em;
+    width: 2em;
+    margin-top: var(--spacing-1);
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands", serif;
+    padding: 0 2px;
+}
+
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+
+#contact {
+    text-align: center;
+}
+
+#contact-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+i {
+    font-size: 2em;
+}
+
+.fab, .far {
+    font-weight: 400;
+}
+
+.fa-html5:before {
+    content: "\f13b";
+}
+
+.fa-css3-alt:before {
+    content: "\f38b";
+}
+
+footer {
+    margin-top: auto;
+    padding: var(--spacing-2) 0;
+    text-align: center;
+}
+
+.heart {
+    color: red;
+}
+
+.mini {
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .about-me-container {
+        flex-direction: column;
+    }
+}

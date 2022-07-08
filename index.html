@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4ffe529b0e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <nav>
+        <h1 id="logo">Krasimir Prisadashki</h1>
+        <ul class="navigation-items">
+            <li class="navigation-item"><a href="#about-me">About Me</a></li>
+            <li class="navigation-item"><a href="#projects">Projects</a></li>
+            <li class="navigation-item"><a href="#skills">Skills</a></li>
+            <li class="navigation-item"><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main><hr>
+        <section id="about-me">
+            <div class="about-me-container">
+                <div class="about-me-text-container">
+                    <h2>About Me</h2>
+                    <p>Hi! I am Krasi, junior developer and I am bulgarian. </p>
+                    <p>I educated in First English Language School.</p>
+                    <p>In my free time I go to the gym and also go out with friends.</p>
+                    <p>Fun fact! I have been programming for <span id="time-container"></span> seconds!</p>
+                </div>
+                <img src="https://scontent.fsof10-1.fna.fbcdn.net/v/t39.30808-6/271651580_3091344344455325_334228076084646735_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=iHdjV2aapA8AX9oNMVn&_nc_ht=scontent.fsof10-1.fna&oh=00_AT8dLPt_idLfwf1_U-sgN9VJ8LfqS1fhHEux9XoYcdc3pg&oe=62CB1667" alt="Not supported" class="portrait">
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Programming languages</h2>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>My first programming language</h3>
+                </summary>
+                <img class="project-image" src="https://th.bing.com/th/id/OIP.k8BxQA7_sk9eRArkWGbCDAHaE-?pid=ImgDet&rs=1" alt="Not supported">
+                <p class="project-description">HTML is the most basic programming language you can start with.</p>
+            </details>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>The most useful language, in my opinion.</h3>
+                </summary>
+                <img class="project-image" src="https://www.iborn.net/sites/default/files/2018-11/JS_0.png" alt="Not supported">
+                <p class="project-description">JS is the best language you can learn.</p>
+            </details>
+            <details class="project">
+                <summary class="project-title">
+                    <h3>The TypeScript programming language</h3>
+                </summary>
+                <img class="project-image" src="https://th.bing.com/th/id/R.f5e33258b60ea94e5aa81b55a05a22dd?rik=oy7dOShBk0STBA&pid=ImgRaw&r=0" alt="Not supported">
+                <p class="project-description">Preferred language for JavaScript</p>
+            </details>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div id="skill-container">
+                <i class="fab fa-html5"></i>
+                <i class="fab fa-css3-alt"></i>
+                <i class="fab fa-js"></i>
+                <i class="fab fa-git-alt"></i>
+                <i class="fab fa-chrome"></i>
+                <i class="fab fa-node"></i>
+                <i class="fab fa-github"></i>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        Made with
+        <span class="heart">♥</span>
+        in Sofia
+    </footer>
+
+    <script>
+
+        const timeContainer = document.getElementById("time-container");
+        const day = "10-01-2021";
+        const date = new Date(day);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+        setInterval(() => {
+            const now = new Date();
+            const difference = Math.floor(
+                (now.getTime() - date.getTime()) / 1000
+            );
+
+            timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
+
+    </script>
+</body>
+</html>
